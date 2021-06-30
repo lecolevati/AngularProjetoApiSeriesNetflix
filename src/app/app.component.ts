@@ -1,3 +1,4 @@
+import { NetflixService } from './services/netflix.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'segundo-projeto';
+  title = 'Netflix API Project';
+
+  constructor(private service: NetflixService) {
+
+  }
+
 }
