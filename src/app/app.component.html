@@ -1,8 +1,27 @@
-<header>
-  <a routerLink = "lista-todos">Listar Todos</a>
-  <a routerLink = "gerar">Cadastrar</a>
-  <a routerLink = "busca" routerLinkActive = "ativo">Buscar</a>
-</header>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+
+<div class='navContainer'>
+  <nav>
+      <ul>
+          <li>
+            <a routerLink = "gerar">Cadastrar</a>
+          </li>
+          <li>
+              <a href='#'> Consultar <i class='fa fa-angle-right fa-fw'></i></a>
+              <!-- ----levelTwo---- -->
+              <ul class='levelTwo'>
+                  <li>
+                    <a routerLink = "lista-todos">Listar Todos</a>
+                  </li>
+                  <li>
+                    <a routerLink = "busca" routerLinkActive = "ativo">Buscar</a>
+                  </li>
+              </ul>
+              <!-- ----levelTwo---- -->
+          </li>
+      </ul>
+  </nav>
+
 <main>
   <router-outlet></router-outlet>
 </main>

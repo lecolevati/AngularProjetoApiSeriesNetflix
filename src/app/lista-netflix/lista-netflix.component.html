@@ -1,26 +1,27 @@
-<section class = "container">
-  <H2 class = "titulo">Seriados Netflix</H2>
-  <table class = "tabela" *ngIf="netflixes.length > 0; else listaVazia">
-  <thead class = "tabela__cabecalho">
-    <th class = "tabela__cabecalho__conteudo">#ID</th>
-    <th class = "tabela__cabecalho__conteudo">Title</th>
-    <th class = "tabela__cabecalho__conteudo">Genre</th>
-    <th class = "tabela__cabecalho__conteudo">Subgenre</th>
-    <th class = "tabela__cabecalho__conteudo">Year</th>
-    <th class = "tabela__cabecalho__conteudo">IMDB Rating</th>
-  </thead>
-  <tbody>
-    <tr class = "tabela__linha" *ngFor="let n of netflixes">
-      <td class = tabela__conteudo>{{n.id}}</td>
-      <td class = tabela__conteudo>{{n.title}}</td>
-      <td class = tabela__conteudo>{{n.genre}}</td>
-      <td class = tabela__conteudo>{{n.subgenre}}</td>
-      <td class = tabela__conteudo>{{n.premiereYear}}</td>
-      <td class = tabela__conteudo>{{n.imdbRating}}</td>
-    </tr>
-  </tbody>
-</table>
-<ng-template #listaVazia>
-  <p>&nbsp;</p>
-</ng-template>
+<section class="container">
+  <br/>
+    <H2 class = "titulo ">Seriados Netflix</H2>
+    <table class = "zui-table zui-table-rounded" *ngIf="netflixes.length > 0; else listaVazia">
+      <thead>
+        <th>#ID</th>
+        <th>Title</th>
+        <th>Genre</th>
+        <th>Subgenre</th>
+        <th>Year</th>
+        <th>IMDB Rating</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let n of netflixes">
+          <td>{{n.id}}</td>
+          <td>{{n.title}}</td>
+          <td>{{n.genre}}</td>
+          <td>{{n.subgenre}}</td>
+          <td>{{n.premiereYear}}</td>
+          <td>{{n.imdbRating}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <ng-template #listaVazia>
+      <p>&nbsp;</p>
+    </ng-template>
 </section>

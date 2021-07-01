@@ -19,6 +19,162 @@ header {
 }
 
 main {
-  background-color: #fcfcfc;
+  background-color: black;
   padding: var(--padding);
+}
+
+*,
+html {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+a {
+    text-decoration: none;
+    /*Remove underline on anchors*/
+}
+ul {
+    list-style: none;
+    /* Rmove list styles*/
+}
+/*-- parent nav--*/
+
+.navContainer {
+    background: #2b2b2b;
+    padding: 5px;
+}
+.navContainer nav {
+    max-width: 920px;
+    margin: left;
+}
+.navContainer nav >ul >li {
+    display: inline-block;
+}
+
+.navContainer nav li >a {
+  display: block;
+  position: relative;
+  padding: 10px 15px;
+  border-bottom: 1px solid #5d5d5d;
+  min-width: 96px;
+  background: #5d5d5d;
+  color: #fff;
+  text-align: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+}
+
+nav >ul >li >ul {
+  position: absolute;
+  border: 1px solid #000
+}
+
+nav >ul >li >ul {
+  position: absolute;
+  border: 1px solid #000;
+  display: none
+}
+nav >ul >li >ul >li >ul,
+nav >ul >li >ul >li >ul>li>ul {
+  position: absolute;
+  left: 100%;
+  width: 140px;
+  top: 0px;
+  display: none;
+  z-index: 2;
+  border: 1px solid #000;
+}
+
+nav >ul >li:hover >ul,
+nav >ul >li >ul >li:hover >ul,
+nav >ul >li >ul >li>ul>li:hover ul {
+    display: block;
+}
+
+nav li {
+  position: relative;
+}
+
+nav >ul >li >ul >li {
+  width: 140px
+}
+
+nav >ul >li:after {
+  content: '';
+  height: 2px;
+  width: 2px;
+  background: #000;
+  color: #fff;
+  opacity: 0;
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+}
+nav >ul >li:hover:after {
+  content: '';
+  opacity: 1;
+  height: 2px;
+  width: 100%;
+  transition: 0.5s;
+}
+
+/*-- Animation--*/
+
+@keyframes threeD {
+  0% {
+      transform: perspective( 400px) rotateY( 0deg);
+      opacity: 0;
+      left: 150%;
+      top: 150%;
+  }
+  20% {
+      transform: perspective( 400px) rotateY( -45deg);
+      opacity: 0.2;
+      left: 140%;
+      top: 140%;
+  }
+  40% {
+      transform: perspective( 400px) rotateY( -45deg);
+      opacity: 0.4;
+      left: 130%;
+      top: 130%;
+  }
+  60% {
+      transform: perspective( 400px) rotateY( -45deg);
+      opacity: 0.6;
+      left: 120%;
+      top: 120%;
+  }
+  80% {
+      transform: perspective( 400px) rotateY( -45deg);
+      opacity: 0.8;
+      left: 110%;
+      top: 110%;
+  }
+  100% {
+      transform: perspective( 400px) rotateY( -45deg);
+      left: 100%;
+      top: 100%;
+      opacity: 1;
+  }
+}
+
+nav >ul >li >ul >li >ul,
+nav >ul >li >ul >li >ul>li>ul {
+    position: absolute;
+    left: 100%;
+    width: 140px;
+    top: 0px;
+    display: none;
+    z-index: 2;
+    border: 1px solid #000;
+    /* animation name */
+
+    -webkit-animation: threeD .1s;
+    /* Chrome, Safari, Opera */
+
+    animation: threeD .1s;
 }

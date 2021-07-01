@@ -1,14 +1,38 @@
+.back {
+  background-color: black;
+  min-height: 100%;
+}
+
+.bg {
+  /* The image used */
+  background-image: linear-gradient(black, black);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .titulo {
   text-align: center;
   font-size: 24px;
   margin-bottom: 16px;
+  margin-top: 0px;
+  color: #FFF;
 }
 
 .tabela {
   text-align: center;
   margin: 0 auto;
   background-color: white;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 10px 8px #888888;
+  border: solid #ccc 1px;
+  -webkit-border-radius: 25px;
+     -moz-border-radius: 25px;
+          border-radius: 25px;
 
   &__cabecalho {
     color: white;
@@ -36,4 +60,71 @@
     border-bottom: 1px solid var(--cinza-claro);
     font-size: 12px;
   }
+}
+
+tr:nth-child(even) {
+  background-color: #959595;
+}
+
+tr:nth-child(odd) {
+  background-color: #D7D7D7;
+}
+
+h2 { text-transform: uppercase; }
+
+.zui-table {
+  text-align: center;
+  margin: 0 auto;
+  border: solid 1px #ccc;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font: normal 13px Arial, sans-serif;
+  box-shadow: 5px 10px 8px #888888;
+}
+.zui-table thead th {
+  background-color: #DDEFEF;
+  border: solid 1px #DDEEEE;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  text-shadow: 1px 1px 1px #888;
+}
+.zui-table tbody td {
+  border: solid 1px #DDEEEE;
+  color: #000;
+  padding: 10px;
+}
+.zui-table-rounded {
+  border: none;
+}
+.zui-table-rounded thead th {
+  background-color: #2B2B2B;
+  text-align: center;
+  border: none;
+  text-shadow: 1px 1px 1px #888;
+  color: #fff;
+}
+.zui-table-rounded thead th:first-child {
+  -webkit-border-radius: 10px 0 0 0;
+  -moz-border-radius: 10px 0 0 0;
+   border-radius: 10px 0 0 0;
+}
+.zui-table-rounded thead th:last-child {
+  -webkit-border-radius: 0 10px 0 0;
+  -moz-border-radius: 0 10px 0 0;
+   border-radius: 0 10px 0 0;
+}
+.zui-table-rounded tbody td {
+  border: none;
+  border-top: solid 1px #000;
+}
+.zui-table-rounded tbody tr:last-child td:first-child {
+  -webkit-border-radius: 0 0 0 10px;
+  -moz-border-radius: 0 0 0 10px;
+   border-radius: 0 0 0 10px;
+}
+.zui-table-rounded tbody tr:last-child td:last-child {
+  -webkit-border-radius: 0 0 10px 0;
+  -moz-border-radius: 0 0 10px 0;
+   border-radius: 0 0 10px 0;
 }

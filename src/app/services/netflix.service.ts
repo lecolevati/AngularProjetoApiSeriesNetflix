@@ -9,7 +9,8 @@ import { Observable } from 'rxjs';
 export class NetflixService {
 
   private listaNetflix: any[];
-  private url = 'http://localhost:8080/restapisimu/api/netflix';
+  // private url = 'http://localhost:8080/restapisimu/api/netflix';
+  private url = 'http://192.168.0.20:8080/restapisimu/api/netflix';
 
   netflixesBusca: any;
 
